@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS t_address, t_period, t_pod, t_pub_house, t_publishing, t_subs CASCADE;
