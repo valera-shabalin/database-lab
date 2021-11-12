@@ -1,0 +1,12 @@
+mat-toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+mat-toolbar mat-nav-list {
+    padding: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
