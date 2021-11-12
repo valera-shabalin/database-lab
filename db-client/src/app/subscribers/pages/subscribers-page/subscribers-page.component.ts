@@ -8,6 +8,11 @@ export interface PeriodicElement {
     fio: string
 }
 
+interface ICitySelect {
+    value: string
+    text: string
+}
+
 const ELEMENT_DATA: PeriodicElement[] = [
     {
         position: 1,
@@ -89,6 +94,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class SubscribersPageComponent implements OnInit {
     displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'fio']
     dataSource = ELEMENT_DATA
+
+    cities: ICitySelect[] = [
+        {
+            value: 'Томск',
+            text: 'Томск',
+        },
+        {
+            value: 'Новокузнецк',
+            text: 'Новокузнецк',
+        },
+    ]
+
+    selected: string = 'Томск'
 
     constructor() {}
 
