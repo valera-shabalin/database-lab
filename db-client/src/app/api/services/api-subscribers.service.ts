@@ -15,8 +15,6 @@ export class ApiSubscribersService {
     constructor(private readonly http: HttpClient) {}
 
     getSubscribers(city: string): Observable<ISubscriber[]> {
-        return this.http.get<ISubscriber[]>(
-            `${this.api}/subscribers?city=${city}`
-        );
+        return this.http.get<ISubscriber[]>(`${this.api}/subscribers`);
     }
 }

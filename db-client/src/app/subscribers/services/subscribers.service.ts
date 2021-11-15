@@ -19,6 +19,8 @@ export class SubscribersService {
     getSubscribers(city: string): Observable<ISubscriber[] | undefined> {
         return this.api.getSubscribers(city).pipe(
             map((subs: ISubscriber[]) => {
+                console.log(subs);
+                subs.forEach((sub, index) => (sub.id = index));
                 this.setSubscribers(subs);
                 return subs;
             })

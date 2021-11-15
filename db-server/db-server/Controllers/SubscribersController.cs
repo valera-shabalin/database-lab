@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using db_server.Models;
+using db_server.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,9 +14,9 @@ namespace db_server.Controllers
     public class SubscribersController : ControllerBase
     {
         [HttpGet]
-        public IActionResult Get()
+        public List<Subscriber> Get([FromServices] DatabaseService dbSrv)
         {
-            return Ok();
+            return dbSrv.GetSubscribers();
         }
     }
 }

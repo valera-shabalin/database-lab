@@ -18,7 +18,6 @@ namespace db_server
             services.AddScoped<DatabaseService>();
             services.AddControllers();
         }
-        a
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
