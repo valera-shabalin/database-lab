@@ -1,5 +1,6 @@
 <mat-card>
     <mat-card-title>Подписчики</mat-card-title>
+
     <mat-card-subtitle>
         <mat-form-field appearance="outline">
             <mat-label>Город</mat-label>
@@ -10,37 +11,8 @@
             </mat-select>
         </mat-form-field>
     </mat-card-subtitle>
+
     <mat-card-content>
-        <table mat-table [dataSource]="dataSource">
-            <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef>No.</th>
-                <td mat-cell *matCellDef="let element">
-                    {{ element.position }}
-                </td>
-            </ng-container>
-
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef>Улица</th>
-                <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-            </ng-container>
-
-            <ng-container matColumnDef="weight">
-                <th mat-header-cell *matHeaderCellDef>Дом</th>
-                <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
-            </ng-container>
-
-            <ng-container matColumnDef="symbol">
-                <th mat-header-cell *matHeaderCellDef>Квартира</th>
-                <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
-            </ng-container>
-
-            <ng-container matColumnDef="fio">
-                <th mat-header-cell *matHeaderCellDef>ФИО</th>
-                <td mat-cell *matCellDef="let element">{{ element.fio }}</td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-        </table>
+        <app-subs-table></app-subs-table>
     </mat-card-content>
 </mat-card>
